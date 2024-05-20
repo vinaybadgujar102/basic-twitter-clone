@@ -39,10 +39,22 @@ function Twitter() {
     ]);
   };
 
+  const handleEditTweet = (tweet) => {
+    // this incoming tweet is updated tweet
+    setTweets(
+      tweets.map((currentTweet) => {
+        if (currentTweet.id === tweet.id) {
+          return tweet;
+        }
+        return currentTweet;
+      })
+    );
+  };
+
   return (
     <>
       <AddTweet onAddTweet={handleAddTweet} />
-      <TweetList tweets={tweets} />
+      <TweetList tweets={tweets} onEditTweet={handleEditTweet} />
     </>
   );
 }

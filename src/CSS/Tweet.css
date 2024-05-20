@@ -5,7 +5,13 @@
   font-size: larger;
 }
 
-.likes {
+.like-createdAt-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.likes,
+.created-at {
   font-size: xx-small;
 }
 
